@@ -60,7 +60,7 @@ public class Main {
 					kmap[x + knights[i].r][y + knights[i].c] = i;
 				}
 			}
-			System.out.println(Arrays.toString(knights));
+//			System.out.println(Arrays.toString(knights));
 		}
 //		print(kmap);
 		for(int i=0; i<Q; i++) {
