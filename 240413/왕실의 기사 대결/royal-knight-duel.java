@@ -39,7 +39,7 @@ public class Main {
 		Q = Integer.parseInt(st.nextToken());
 		map = new int[L][L];
 		kmap = new int[L][L];
-		knights = new Knight[L+1];
+		knights = new Knight[N+1];
 		for (int i = 0; i < L; ++i) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < L; ++j) {
@@ -60,6 +60,7 @@ public class Main {
 					kmap[x + knights[i].r][y + knights[i].c] = i;
 				}
 			}
+			System.out.println(Arrays.toString(knights));
 		}
 //		print(kmap);
 		for(int i=0; i<Q; i++) {
@@ -67,7 +68,6 @@ public class Main {
 			int id = Integer.parseInt(st.nextToken()); // i번째 기사
 			int d = Integer.parseInt(st.nextToken()); //d방향으로 
 			game(id, d);
-//			System.out.println(Arrays.toString(knights));
 		}
 		int sum = 0;
 		for(int i=0; i<knights.length; i++) {
