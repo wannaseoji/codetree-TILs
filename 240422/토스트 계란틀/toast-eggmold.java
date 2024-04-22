@@ -32,13 +32,18 @@ public class Main {
 			for(int i=0; i<n; i++) {
 				for(int j=0; j<n; j++) {
 					if(!canSplit[i][j]) {
-						BFS(i,j, board2);
+						BFS(i,j, board);
 						
 					}
 					
 				}
 			}
-			
+			for(int i=0; i<n; i++) {
+				for(int j=0; j<n; j++) {
+					board[i][j] = board2[i][j];
+				}
+			}
+//			print(board2);
 			if(changed<2)break;
 			cnt++;
 		}
@@ -48,7 +53,7 @@ public class Main {
 	
 	
 	
-	private static void print(boolean[][] m) {
+	private static void print(int[][] m) {
 		System.out.println();
 		for(int i=0; i<n; i++) {
 			
@@ -65,6 +70,7 @@ public class Main {
 		ArrayDeque<int[]> sub = new ArrayDeque<>();
 		adq.add(new int[] {r,c});
 		sub.add(new int[] {r,c});
+//		System.out.println("start : "+r+" "+c);
 		int totalEgg= 0;
 		int ecnt = 1;
 		while(!adq.isEmpty()) {
@@ -90,6 +96,7 @@ public class Main {
 					sub.add(new int[] {nr,nc});
 					changed++;
 					totalEgg+=board[nr][nc];
+//					System.out.println("picked:" +nr+" "+nc);
 					ecnt++;
 				}
 			}
