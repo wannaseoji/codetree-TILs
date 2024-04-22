@@ -28,6 +28,7 @@ public class Main {
 		}
 		int cnt = 0;
 		while(true) {
+			
 			changed= 0;
 			for(int i=0; i<n; i++) {
 				for(int j=0; j<n; j++) {
@@ -41,6 +42,7 @@ public class Main {
 			for(int i=0; i<n; i++) {
 				for(int j=0; j<n; j++) {
 					board[i][j] = board2[i][j];
+					canSplit[i][j] = false;
 				}
 			}
 //			print(board2);
