@@ -25,7 +25,7 @@ public class Main {
 	static boolean visited[][];
 	static int score;
 	
-	static int[]count = new int[841];
+	static int[]count = new int[500];
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -123,7 +123,7 @@ public class Main {
 	
 	private static int getScore() {
 		ArrayList<Integer> arr = new ArrayList<>();
-		for(int i=0; i<841; i++) {
+		for(int i=0; i<500; i++) {
 			if(count[i]!=0)
 				arr.add(i);
 		}
@@ -187,7 +187,7 @@ public class Main {
 				}
 			}
 		}
-		for(int i=0; i<841; i++) {
+		for(int i=0; i<500; i++) {
 			if(count[i]!=1 && count[i]!=0)count[i]--;
 		}
 		//print(gmap);
